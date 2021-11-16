@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+from __future__ import absolute_import
 import logging
 import traceback
 import xml.etree.ElementTree as ET

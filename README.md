@@ -6,6 +6,8 @@ The compiler is based on the eggbot project and it basically converts all of the
 
 Some of the characteristics of the compiler can be changed by editing the config.py
 
+SVG must match dimensions of printer build plate
+
 Inkscape Plugin
 ---------------
 

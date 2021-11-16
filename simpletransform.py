@@ -21,8 +21,9 @@ barraud@math.univ-lille1.fr
 This code defines several functions to make handling of transform
 attribute easier.
 '''
+from __future__ import absolute_import
 import cubicsuperpath, bezmisc 
-import copy, math, re
+import copy, math, re, inkex
 
 def parseTransform(transf,mat=[[1.0, 0.0, 0.0], [0.0, 1.0, 0.0]]):
     if transf=="" or transf==None:
@@ -117,7 +118,7 @@ def applyTransformToPath(mat,path):
 def fuseTransform(node):
     if node.get('d')==None:
         #FIXME: how do you raise errors?
-        raise AssertionError, 'can not fuse "transform" of elements that have no "d" attribute'
+        raise AssertionError('can not fuse "transform" of elements that have no "d" attribute')
     t = node.get("transform")
     if t == None:
         return
